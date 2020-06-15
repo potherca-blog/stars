@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% if page %}{% assign post = page %}{% endif %}
+
+{% if post.image %}
+  <img class="header__image" src="{{ post.image }}" />
+{% endif %}
+
+{% include breadcrumbs.lqd.html %}
+
+{% toc %}
+
+{{ content }}
