@@ -1,0 +1,35 @@
+{% comment %}
+  Displays a breadcrum bar
+
+  Usage:
+
+    {% include breadcrumbs.lqd.html %}
+
+{% endcomment %}
+{% if page.url != '/' and page.url != '/404.html'%}
+<ol class="breadcrumbs">
+{% capture breadcrumb %}
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="{{ site.baseurl }}/">
+      <span class="breadcrumbs__title">Home</span>
+    </a>
+  </li>
+  {% assign breadcrumb_page_url = site.baseurl %}
+  {% assign breadcrumb_pages = page.url | remove: "/index.html" | split: '/' %}
+  {% for breadcrumb_page in breadcrumb_pages %}
+    {% assign breadcrumb_page_url = breadcrumb_page_url | append: breadcrumb_page  | append: '/' %}
+    {% if breadcrumb_page != '' %}
+      <li class="breadcrumbs__item">
+        {% if forloop.last != true %}
+        <a class="breadcrumbs__link" href="{{breadcrumb_page_url}}">
+        {% endif %}
+            <span class="breadcrumbs__title">{{breadcrumb_page}}</span>
+        {% if forloop.last != true %}
+        </a>
+        {% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endcapture %}{{ breadcrumb | strip_newlines }}
+</ol>
+{% endif %}
