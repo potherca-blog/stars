@@ -1,0 +1,60 @@
+--- --- @import "{{ site.theme }}";
+
+/*=======( Archives )=========================================================*/
+
+.archive-type--tag::after,
+.archive-type--tag::before {
+    content: '"';
+}
+
+/*=======( Breadcrumbs )======================================================*/
+
+.breadcrumbs {
+    padding: 0;
+}
+
+.breadcrumbs__item {
+    display: inline-block;
+}
+
+.breadcrumbs__item:before {
+    /* Uses » to separate breadcrumbs */
+    content: '\00BB';
+}
+
+.breadcrumbs__item:first-child:before {
+    display: none;
+}
+
+.breadcrumbs__item:last-child {
+    opacity: 0.5;
+}
+
+/*=======( Liquid Tags )======================================================*/
+
+.liquid-tag {
+    border: 1px solid;
+    color: #0366d6;
+    display: inline-block;
+    padding: 0.35em;
+}
+
+/*=======( Table-of-Contents )================================================*/
+
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.toc-entry {
+    display: block;
+    padding: 0 0.2em;
+    border-radius: 0.35em;
+    background: #0366d6;
+    color: white;
+}
+
+.toc-entry a {
+    color: inherit;
+}
