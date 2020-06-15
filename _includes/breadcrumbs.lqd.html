@@ -8,7 +8,6 @@
 {% endcomment %}
 {% if page.url != '/' and page.url != '/404.html'%}
 <ol class="breadcrumbs">
-{% capture breadcrumb %}
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="{{ site.baseurl }}/">
       <span class="breadcrumbs__title">Home</span>
@@ -30,6 +29,5 @@
       </li>
     {% endif %}
   {% endfor %}
-{% endcapture %}{{ breadcrumb | strip_newlines }}
 </ol>
 {% endif %}

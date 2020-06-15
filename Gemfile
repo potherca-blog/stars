@@ -4,6 +4,7 @@ gem "jekyll", "~> 4.0.0"
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
+  gem 'jekyll-tidy'
   gem 'jekyll-toc'
 
   # ============================================================================

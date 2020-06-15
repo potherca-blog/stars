@@ -20,6 +20,7 @@ defaults:
 
 plugins:
   - jekyll-archives
+  - jekyll-tidy
   - jekyll-toc
 
   # - jekyll-avatar
