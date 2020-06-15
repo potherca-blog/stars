@@ -10,6 +10,7 @@ timezone: Europe/Amsterdam
 title: Potherca's Weekly Github Stars
 
 plugins:
+  - jekyll-toc
   # - jekyll-avatar
   # - jekyll-commonmark-ghpages
   # NOT YET COMPATIBLE # - jekyll-default-layout

@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.0.0"
 
 group :jekyll_plugins do
+  gem 'jekyll-toc'
+
   # ============================================================================
   # As Github Pages does not (yet) support Jekyll 4, all plugins are listed.
   # Once it does the long list below can be replaced by this:
