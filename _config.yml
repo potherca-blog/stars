@@ -3,14 +3,25 @@
 
 baseurl: /weekly-github-stars
 description: Background information about Github repositories I have starred.
+permalink: /:year/:title/
 # remote_theme: pages-themes/Primer
 repository: potherca-blog/weekly-github-stars
 theme: jekyll-theme-primer
 timezone: Europe/Amsterdam
 title: Potherca's Weekly Github Stars
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      toc: true
+
 plugins:
+  - jekyll-archives
   - jekyll-toc
+
   # - jekyll-avatar
   # - jekyll-commonmark-ghpages
   # NOT YET COMPATIBLE # - jekyll-default-layout
@@ -26,7 +37,8 @@ plugins:
   # - jekyll-remote-theme
   # - jekyll-seo-tag
   # - jekyll-sitemap
-  # - jekyll-theme-primer
   # - jekyll-titles-from-headings
 
 # Plugin specific settings
+jekyll-archives:
+  enabled: [year, categories, tags]
