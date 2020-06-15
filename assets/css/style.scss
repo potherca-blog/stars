@@ -1,4 +1,10 @@
---- --- @import "{{ site.theme }}";
+---
+---
+/*=======( Original Theme )===================================================*/
+
+@import "{{ site.theme }}";
+
+/*============================================================================*/
 
 /*=======( Archives )=========================================================*/
 
@@ -39,15 +45,56 @@
     padding: 0.35em;
 }
 
+/*=======( Page Header )======================================================*/
+  .page-header {
+      display: flex;
+  }
+
+  .page-header > div {
+      margin: 1em;
+  }
+
 /*=======( Table-of-Contents )================================================*/
 
 .section-nav {
+    background-color: #F9F9F9;
+    border: 1px solid #9F9F9F;
+    font-size: 95%;
+    padding: 0 1em 0.35em 1em;
+}
+
+.section-nav::before {
+    content: "Contents";
+    display: block;
+    font-weight: 700;
+    padding-top: 0.35em;
+    text-align: center;
+    width: 100%;
+}
+
+.section-nav {
+    list-style-type: upper-roman;
+}
+.section-nav ul {
+    list-style-type: decimal;
+}
+
+.toc-entry {
+    white-space: nowrap;
+}
+
+/*=======( Tag List Page )====================================================*/
+
+.tags-list .section-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.tags-list .section-nav::before {
+    content: "Available Tags";
+}
 
-.toc-entry {
+.tags-list .toc-entry {
     display: block;
     padding: 0 0.2em;
     border-radius: 0.35em;
@@ -55,6 +102,6 @@
     color: white;
 }
 
-.toc-entry a {
+.tags-list .toc-entry a {
     color: inherit;
 }

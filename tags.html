@@ -4,7 +4,7 @@ permalink: /tag
 title: All tags
 toc: true
 ---
-
+<section class="tags-list">
 {% capture content %}
     {% for tag in site.tags %}
       <h3>{{ tag[0] }}</h3>
@@ -17,3 +17,4 @@ toc: true
 {% endcapture %}
 
 {{ content | toc }}
+</section>

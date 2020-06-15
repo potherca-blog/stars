@@ -3,12 +3,19 @@ layout: default
 ---
 {% if page %}{% assign post = page %}{% endif %}
 
-{% if post.image %}
-  <img class="header__image" src="{{ post.image }}" />
-{% endif %}
+<header class="page-header">
+  <div>
+    {% include breadcrumbs.lqd.html %}
 
-{% include breadcrumbs.lqd.html %}
+    {% toc %}
+  </div>
 
-{% toc %}
+  {% if post.image %}
+  <div>
+    <img class="header__image" src="{{ post.image }}" />
+  </div>
+  {% endif %}
+
+</header>
 
 {{ content }}
