@@ -10,13 +10,4 @@ layout: default
 
 {% include breadcrumbs.lqd.html %}
 
-<ul class="posts">
-  {% for post in page.posts %}
-    {% if post.date %}
-    <li>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      (<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>)
-    </li>
-    {% endif %}
-{% endfor %}
-</ul>
+{% include list-posts.lqd.html posts=page.posts %}

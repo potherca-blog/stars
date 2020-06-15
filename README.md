@@ -1,6 +1,6 @@
 ---
 image: https://dev-to-uploads.s3.amazonaws.com/i/wyws3jzmoq01g9jjw3ia.png
-layout: post
+layout: home
 permalink: /
 title: Potherca's Weekly Github Stars
 ---
