@@ -1,5 +1,6 @@
 ---
-remote_theme: pages-themes/Primer
-
-title: Potherca's Weekly Github Stars
+baseurl: /weekly-github-stars
 description: Background information about Github repositories I have starred.
+remote_theme: pages-themes/Primer
+repository: potherca-blog/weekly-github-stars
+title: Potherca's Weekly Github Stars
