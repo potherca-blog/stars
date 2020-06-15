@@ -1,8 +1,7 @@
 ---
-categories: []
 image: https://dev-to-uploads.s3.amazonaws.com/i/wyws3jzmoq01g9jjw3ia.png
 layout: post
-tags: [github, stars, weekly]
+permalink: /
 title: Potherca's Weekly Github Stars
 ---
 
@@ -29,6 +28,8 @@ This week, however, I finally had enough time and energy to make a first attempt
 Every week (most likely after the weekend), I'll be posting to [dev.to][1] which Github repositories I have starred. I'll also explain a bit about _why_ I starred a specific repository and provide some background details.
 
 So, if you want to know what is going on in my world, development wise, you can now follow along. 👍
+
+{% user potherca %} {% tag weekly %} {% tag github %} {% tag stars %}
 
 - - -
 
