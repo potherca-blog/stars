@@ -1,0 +1,23 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - uses: helaili/jekyll-action@master
+        env:
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PERSONAL_ACCESS_TOKEN }}
