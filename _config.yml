@@ -1,11 +1,11 @@
 ---
 # Defaults can be found at https://jekyllrb.com/docs/configuration/default/
 
-baseurl: /weekly-github-stars
+baseurl: /stars
 description: Background information about Github repositories I have starred.
 permalink: /:year/:title/
 # remote_theme: pages-themes/Primer
-repository: potherca-blog/weekly-github-stars
+repository: potherca/stars
 theme: jekyll-theme-primer
 timezone: Europe/Amsterdam
 title: Potherca's Weekly Github Stars
