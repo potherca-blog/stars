@@ -17,6 +17,11 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       toc: true
+  -
+    scope:
+      path: "repos"
+    values:
+      layout: post
 
 plugins:
   - jekyll-archives
