@@ -50,8 +50,8 @@ module Jekyll
 end
 
 # Register tags
-Liquid::Template.register_tag('twitter', Jekyll::TwitterTag)
-Liquid::Template.register_tag('post', Jekyll::PostTag)
 Liquid::Template.register_tag('github', Jekyll::GithubTag)
+Liquid::Template.register_tag('post', Jekyll::PostTag)
 Liquid::Template.register_tag('tag', Jekyll::TextTag)
+Liquid::Template.register_tag('twitter', Jekyll::TwitterTag)
 Liquid::Template.register_tag('user', Jekyll::HtmlTag)
