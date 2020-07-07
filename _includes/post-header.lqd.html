@@ -1,0 +1,34 @@
+{% comment %}
+  Header for blog posts.
+
+  Displays the post.image (if present), publication date, estimated reading time,
+  and any tags or categories that have been set.
+
+  The categories, tags, and time (year, month, and/or week) link to archive
+  pages. (Requires jekyll-archives Gem).
+
+  Usage:
+
+    {% include post-header.lqd.html %}
+
+{% endcomment %}
+<header>
+  {% if page %}{% assign post = page %}{% endif %}
+
+  {% if post.image %}
+    <img class="header__image" src="{{ post.image }}" />
+  {% endif %}
+
+  <span class="reading-time-estimate">
+    {{ post.content | number_of_words}} words
+    ({{ post.content | number_of_words | divided_by: 250 | ceil }} minute read)
+  </span>
+
+  {% if post.categories.size > 0 %}
+    Categories: <span>{{ post.categories | join: ', ' }}</span>
+  {% endif %}
+
+  {% if post.tags.size > 0  %}
+    Tags: <span>{{ post.tags | join: ', ' }}</span>
+  {% endif %}
+</header>

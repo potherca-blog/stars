@@ -4,7 +4,6 @@
 # https://github.com/thepracticaldev/dev.to/tree/HEAD/app/liquid_tags
 module Jekyll
   class TextTag < Liquid::Tag
-
     def render(context) @text end
 
     def initialize(tag_name, text, tokens)
@@ -23,8 +22,21 @@ module Jekyll
     end
   end
 
-  class LinkTag < Jekyll::HtmlTag
+  class ImageTag < Jekyll::HtmlTag
+    def link(text) text end
 
+    def render(context)
+      link = link(@text)
+      @text = <<~HTML
+                <a href="#{link}"><img alt="#{@text}" src="#{source}" /></a>
+      HTML
+      super
+    end
+
+    def source(text) text end
+  end
+
+  class LinkTag < Jekyll::HtmlTag
     def link(text) text end
 
     def render(context)
@@ -36,8 +48,9 @@ module Jekyll
     end
   end
 
-  class GithubTag < Jekyll::LinkTag
+  class GithubTag < Jekyll::ImageTag
     def link(text) "https://github.com/#{text}" end
+    def source(text) "https://gh-card.dev/repos/#{text}.png" end
   end
 
   class PostTag < Jekyll::LinkTag
