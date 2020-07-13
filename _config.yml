@@ -4,9 +4,8 @@
 baseurl: /stars
 description: Background information about Github repositories I have starred.
 permalink: /:year/:title/
-# remote_theme: pages-themes/Primer
+remote_theme: Potherca/extend-the-docs@theme
 repository: potherca/stars
-theme: jekyll-theme-primer
 timezone: Europe/Amsterdam
 title: Potherca's Weekly Github Stars
 
@@ -48,3 +47,19 @@ plugins:
 # Plugin specific settings
 jekyll-archives:
   enabled: [year, categories, tags]
+
+# Extend the Docs (Fork) settings
+nav:
+  exclude:
+    - "/"
+  recurse: true
+  cross_repository:
+    show_homepage: false # use the homepage (from the repository settings) instead of https://site.url/repository-name
+    show_archived: false  # Whether to include repositories that have been archived (true) or not (false)
+
+# Just the Docs (Source) settings
+aux_links:
+  "Potherca on GitHub":
+    - "https://github.com/Potherca"
+
+gh_edit_repository: https://github.com/Potherca/liquid-linter-cli
